@@ -10,6 +10,7 @@ import { Mdx } from "@/components/mdx-component";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
+import { ScrollProgress } from "@/components/magicui/scroll-progress";
 
 interface BlogPageItemProps {
   params: {
@@ -63,6 +64,7 @@ export default async function BlogPageItem({ params }: BlogPageItemProps) {
 
   return (
     <article className="container relative max-w-3xl py-6 lg:py-10">
+      <ScrollProgress className="top-[65px]" />
       <div>
         {blog.date && (
           <time

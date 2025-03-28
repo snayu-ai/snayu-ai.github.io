@@ -11,7 +11,7 @@ import { Icons } from "./icons";
 export default function SiteHeader() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-40 border-b bg-background px-2">
+    <header className="sticky top-0 z-40 bg-background px-2 bg-transparent backdrop-blur-sm dark:bg-background/80">
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
         <div className="flex items-center space-x-3">
           <Link href="/" className="flex items-center space-x-2 text-foreground">

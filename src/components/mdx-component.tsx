@@ -4,6 +4,7 @@ import React, { HTMLAttributes } from "react";
 import * as runtime from "react/jsx-runtime";
 
 import Image from "next/image";
+import { Tab, Tabs } from "fumadocs-ui/components/tabs";
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);
@@ -157,6 +158,8 @@ const components = {
     />
   ),
   Image,
+  Tab,
+  Tabs
 };
 
 interface MdxProps {

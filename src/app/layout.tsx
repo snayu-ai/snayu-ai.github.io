@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Geist, Lexend } from "next/font/google";
 import "@/styles/globals.css";
+import "@/styles/styles.css";
 import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import App from "@/components/app";
@@ -20,18 +21,34 @@ const fontCode = localFont({
   variable: "--font-code",
 });
 
+
+ const titleFont = localFont({
+  src: "../assets/fonts/Sentient-Variable.woff2",
+  display: "swap",
+  variable: "--font-title",
+});
+
+const titleFontItalic = localFont({
+  src: "../assets/fonts/Sentient-VariableItalic.woff2",
+  display: "swap",
+  variable: "--font-title-italic",
+});
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: ReactNode;
 }>) {
   return (
-    <html lang="en" className="">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
           "min-h-screen antialiased font-geist bg-background",
           geist.variable,
           fontCode.variable,
+          titleFont.variable,
+          titleFontItalic.variable,
         )}
       >
         <App>{children}</App>

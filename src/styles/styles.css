@@ -1,0 +1,29 @@
+
+
+* {
+    letter-spacing: -.01em;
+}
+
+
+@keyframes ripple {
+    0%, to {
+        transform:translate(-50%, -50%) scale(1)
+    }
+
+    50% {
+        transform:translate(-50%, -50%) scale(.9)
+    }
+}
+
+.animate-ripple {
+    animation:ripple 3.4s ease infinite
+}
+
+pre {
+    border: 1px solid hsl(var(--border)) !important;
+}
+
+pre code span {
+    line-height: 1.8;
+    font-weight: 500;
+}

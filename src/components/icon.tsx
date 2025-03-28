@@ -18,3 +18,5 @@ export const MitraIcon = (props: any) => (
     </g>
   </svg>
 );
+
+export default MitraIcon;

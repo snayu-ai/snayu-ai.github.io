@@ -16,7 +16,7 @@ import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
 // import StatsChart from "@/components/stats-chart";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
-import { MitraIcon } from "@/app/icon";
+import { MitraIcon } from "@/components/icon";
 import { RippleCard } from "./ui/ripple-card";
 // import { defaultDomains } from "@/lib/data";
 // import { RippleCard } from "./ui/ripper-card";

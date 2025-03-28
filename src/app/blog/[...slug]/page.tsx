@@ -12,14 +12,11 @@ import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { ScrollProgress } from "@/components/magicui/scroll-progress";
 
-interface BlogPageItemProps {
-  params: {
-    slug: string[];
-  };
-}
+type BlogPageItem = {slug: string[]};
+type BlogPageItemProps = Promise<BlogPageItem>
 
-async function getBlogFromParams(params: BlogPageItemProps["params"]) {
-  const slug = params?.slug.join("/");
+async function getBlogFromParams(params: BlogPageItem) {
+  const slug = (await params)?.slug.join("/");
   const blog = allBlogs.find((blog) => blog.slugAsParams === slug);
 
   if (!blog) {
@@ -29,10 +26,8 @@ async function getBlogFromParams(params: BlogPageItemProps["params"]) {
   return blog;
 }
 
-export async function generateMetadata({
-  params,
-}: BlogPageItemProps): Promise<Metadata> {
-  const blog = await getBlogFromParams(params);
+export async function generateMetadata(props: { params: BlogPageItemProps }): Promise<Metadata> {
+  const blog = await getBlogFromParams(await props.params);
 
   if (!blog) {
     return {};
@@ -48,14 +43,16 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams(): Promise<
-  BlogPageItemProps["params"][]
+  BlogPageItem[]
 > {
   return allBlogs.map((blog) => ({
     slug: blog.slugAsParams.split("/"),
   }));
 }
 
-export default async function BlogPageItem({ params }: BlogPageItemProps) {
+export default async function BlogPageItem(props: { params: BlogPageItemProps }) {
+
+  const params = await props.params;
   const blog = await getBlogFromParams(params);
 
   if (!blog) {

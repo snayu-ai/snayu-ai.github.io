@@ -123,7 +123,7 @@ const features = [
       <div className="absolute h-full w-full left-0 top-0 origin-top rounded-md transition-all duration-300 ease-out group-hover:scale-[105%]">
         <div className="absolute h-full w-full [mask-image:linear-gradient(to_top,transparent_20%,#000_70%)]">
           <div className="absolute h-full w-full [mask-image:linear-gradient(to_bottom,transparent_2%,#000_10%)]">
-            <RippleCard text="there are more to come." />
+            <RippleCard text={<>there are<br /> more to<br /> come.</>} />
           </div>
         </div>
       </div>

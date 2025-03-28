@@ -70,3 +70,18 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+@keyframes ripple {
+    0%, to {
+        transform:translate(-50%, -50%) scale(1)
+    }
+
+    50% {
+        transform:translate(-50%, -50%) scale(.9)
+    }
+}
+
+.animate-ripple {
+    animation:ripple 3.4s ease infinite
+}

@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import Link, { LinkProps } from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { NAV_LIST } from "@/constants";
+import ThemeSwitcher from "./theme-switcher";
 
 interface MobileNavProps {
   onOpenChange: () => void;
@@ -20,10 +21,11 @@ export default function MobileNav({ onOpenChange }: MobileNavProps) {
             className="flex items-center"
             onOpenChange={onOpenChange}
           >
-            <item.icon className="mr-2 size-4" />
             <span>{item.label}</span>
           </MobileLink>
         ))}
+
+        <ThemeSwitcher />
       </div>
     </div>
   );
@@ -54,7 +56,7 @@ const MobileLink = ({
       className={cn(
         "transition-colors hover:text-primary",
         pathname === href.toString() ? "text-primary" : "text-muted-foreground",
-        className,
+        className
       )}
       {...props}
     >

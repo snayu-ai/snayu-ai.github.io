@@ -21,7 +21,6 @@ export default function HeaderNav() {
               : "text-muted-foreground",
           )}
         >
-          <item.icon className="mr-2 size-4" />
           <span className="font-medium">{item.label}</span>
         </Link>
       ))}

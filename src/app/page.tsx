@@ -12,9 +12,9 @@ export default function Home() {
   const {resolvedTheme} = useTheme();
 
   return (
-    <section className="space-y-6 pb-8 md:pb-12 md:pt-10 lg:py-32">
+    <section className="space-y-6 pb-8 md:pb-12 md:pt-10 lg:py-6">
       <div className="container p-1 mt-6 flex max-w-5xl flex-col items-center gap-4 text-center xl:mt-0">
-        <h1 className="text-3xl font-semibold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl max-w-3xl w-full">
+        <h1 className="text-left text-4xl font-semibold tracking-tight sm:text-center sm:text-5xl md:text-6xl lg:text-7xl max-w-3xl w-full">
           We shape the
           <br />
           <LineShadowText className="italic" shadowColor={resolvedTheme === "dark" ? "white" : "black"}>

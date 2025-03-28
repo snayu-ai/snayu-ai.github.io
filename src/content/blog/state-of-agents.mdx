@@ -1,0 +1,102 @@
+---
+title: "Current state of LLM agents"
+description: "LLM agents are rising the hype cycle. But are they worth it?"
+image: "/images/blog/llm-agent.png"
+date: "2025-03-28"
+author: "Tridib Roy Arjo"
+---
+
+
+We'll build the same system you've seen on the quickstart, web searching system; but this time, we will carefully look at each step.
+
+## Create a manager object
+
+**Agent systems require a lot of resources.** Most of the resources are cluttered and unorganized. With a manager object, we register such resources at once for easier access.
+
+We can
+
+```python
+from chetan import ChetanManager
+
+# Optional: Connect it to Snayu cloud for effortless observability
+import snayu
+
+# Initialize a manager object, using snayu as observability provider
+mgr = ChetanManager(provider=snayu.provider)
+```
+
+## Primitives
+
+### Language models
+Language models need to be aligned with our specific use case. Using generic pre-trained models often leads to vague responses, hallucinations, and potential harm.
+
+While API providers like OpenAI offer access to base models and some fine-tuning capabilities, they still lack advanced alignment techniques like RLHF with algorithms such as [GRPO](https://arxiv.org/pdf/2402.03300). As responsible developers, we should at minimum perform Supervised Fine-tuning (SFT) to adapt models to our specific needs.
+
+So we added built-in SFT and RL capabilities using GRPO to [chetan-serve](https://github.com/snayu-ai/chetan-serve), the official agent system server for chetan. With chetan-serve, we can host both, the language models and agent systems in one server.
+
+Tighter integration between LMs and agent systems produces reduce latency, increase efficiency and yield better results.
+
+
+<Tabs items={['chetan-serve', 'OpenAI']}>
+  <Tab value="chetan-serve">
+```python
+from chetan.lm.serve import ChetanServeLM
+
+llm = ChetanServeLM()
+
+# Set as the default language model
+mgr.llm.default = llm
+
+```
+</Tab>
+
+  <Tab value="OpenAI">
+```python
+from chetan.lm.openai import OpenAILM
+
+llm = OpenAILM()
+
+# Set as the default language model
+mgr.llm.default = llm
+
+```
+
+</Tab>
+</Tabs>
+
+### Modules
+
+When we want to extend the agent's architecture with new functionality, `modules` make extension effortless. Chetan provides built-in modules for diverse range of abilities like Recommendation, Memory, RAG.
+
+```python
+from chetan.modules.rec import ToolRecommender
+from chetan.modules.memory import SimpleKVMemory
+
+# Embedding-based recommender to suggest relevant tools
+tool_rec = ToolRecommender()
+# based on the current context and user input
+kv_mem = SimpleKVMemory(k=4)
+```
+
+### Agent architecture
+
+We will use the `AgentLoop`class. Applying sequential modules, we can extend various stages of the loop, enabling vertical integration of the agent's capabilities. This allows us to create a more complex and capable agent system.
+
+```python
+from chetan.agent import AgentLoop
+
+# Sequentially use the agent modules
+DefaultAgentLoop = AgentLoop().use(
+  tool_rec,
+  kv_mem
+)
+
+# Register the agent loop as default
+mgr.agent_loops["default"] = DefaultAgentLoop
+```
+
+## Entities
+
+## Systems
+
+## Orchestration

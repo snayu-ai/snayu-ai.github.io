@@ -24,6 +24,8 @@ const config = {
       fontFamily: {
         lexend: ["var(--font-lexend)", ...fontFamily.sans],
         code: ["var(--font-code)", ...fontFamily.sans],
+        title: ["var(--font-title)", ...fontFamily.sans],
+        titleItalic: ["var(--font-title-italic)", ...fontFamily.sans],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -81,7 +83,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("tailwind-typography")],
 } satisfies Config;
 
 export default config;

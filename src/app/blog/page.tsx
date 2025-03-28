@@ -18,7 +18,7 @@ export default function BlogPage() {
     <div className="container max-w-4xl py-6 lg:py-10">
       <PageHeader
         title="Blog"
-        description="A blog using velite. Posts are written in MDX"
+        description="Blogs from Snayu about LLM Agents, Tools, and more"
       />
       <hr className="my-8" />
 
@@ -35,11 +35,11 @@ export default function BlogPage() {
                   alt={blog.title}
                   width={804}
                   height={452}
-                  className="border bg-muted transition-colors"
+                  className="border bg-muted transition-colors rounded-2xl"
                 />
               )}
 
-              <h2 className="text-2xl font-extrabold text-primary">
+              <h2 className="text-3xl font-title font-medium text-primary tracking-tighter">
                 {blog.title}
               </h2>
               {blog.description && (

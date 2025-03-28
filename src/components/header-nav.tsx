@@ -4,6 +4,7 @@ import { NAV_LIST } from "@/constants";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
+import ThemeSwitcher from "./theme-switcher";
 
 export default function HeaderNav() {
   const segment = useSelectedLayoutSegment();
@@ -21,9 +22,10 @@ export default function HeaderNav() {
           )}
         >
           <item.icon className="mr-2 size-4" />
-          <span>{item.label}</span>
+          <span className="font-medium">{item.label}</span>
         </Link>
       ))}
+      <ThemeSwitcher />
     </nav>
   );
 }

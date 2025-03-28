@@ -97,158 +97,33 @@ const features = [
     className: "col-span-3 md:col-span-2",
     background: (
       <>
-        <div className="absolute h-full w-full left-0 top-12 flex justify-center rounded-md transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_40%,#000_70%)] group-hover:scale-105 group-hover:-translate-y-4">
-          <div className="text-7xl font-semibold w-full flex justify-center items-center h-2/3 group-hover:-translate-y-2 transition-all duration-300">
-            <a
-              href={`${process.env.GITHUB_URL}/${process.env.REPO_NAME}`}
-              className="flex items-center gap-2 border shadow-xl p-5 rounded-lg border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05] dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
-            >
-              <MitraIcon className="h-14 w-14 drop-shadow" />
-            </a>
-          </div>
-        </div>
-      </>
-    ),
-  },
-  {
-    Icon: "",
-    name: "",
-    description: "",
-    className: "col-span-3 md:col-span-1",
-    href: `${process.env.NEXT_PUBLIC_PORTFOLIO_URL}/tags/vercel`,
-    cta: "Learn more",
-    background: (
-      <div className="absolute h-full w-full left-0 top-0 origin-top rounded-md transition-all duration-300 ease-out group-hover:scale-[105%]">
-        <div className="absolute h-full w-full [mask-image:linear-gradient(to_top,transparent_20%,#000_70%)]">
-          <div className="absolute h-full w-full [mask-image:linear-gradient(to_bottom,transparent_2%,#000_10%)]">
-            <RippleCard />
-          </div>
-        </div>
-      </div>
-    ),
-  },
-
-  {
-    Icon: "",
-    name: "Worldwide Reach",
-    description:
-      "Deploy to any region on earth. From remote servers, on-prem, in the cloud, or to the edge.",
-    className: "col-span-3 md:col-span-3",
-    href: `${process.env.NEXT_PUBLIC_PORTFOLIO_URL}/tags/vercel`,
-    cta: "Learn more",
-    background: (
-      <div className="absolute w-full h-full right-0 top-0 origin-top rounded-md transition-all duration-300 ease-out  [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] md:[mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105 group-hover:-translate-y-4"></div>
-    ),
-  },
-
-  {
-    Icon: "",
-    name: "GitHub Stars",
-    description: "Star this repository to show your support.",
-    className: "col-span-3 md:col-span-1",
-    href: `${process.env.GITHUB_URL}/${process.env.REPO_NAME}`,
-    cta: "Star repository",
-    background: (
-      <div className="absolute h-full w-full left-0 top-0 origin-top rounded-md transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_40%,#000_70%)] group-hover:scale-105 group-hover:-translate-y-4">
-        <div className="text-7xl font-semibold w-full flex justify-center items-center h-2/3 group-hover:-translate-y-2 transition-all duration-300">
-          <a
-            href={`${process.env.GITHUB_URL}/${process.env.REPO_NAME}`}
-            className="flex items-center gap-2 border shadow-xl p-5 rounded-lg border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05] dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
-          >
-            <Image
-              src="/images/githubstar.webp"
-              alt="GitHub logo"
-              className="h-14 w-14 drop-shadow"
-              width={56}
-              height={56}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-    ),
-  },
-
-  {
-    Icon: "",
-    name: "Project Showcase",
-    description:
-      "Here are a few of my recent projects, using the technologies mentioned above.",
-    className: "col-span-3 md:col-span-2",
-    href: `${process.env.NEXT_PUBLIC_PORTFOLIO_URL}/projects`,
-    cta: "All projects",
-    background: (
-      <div className="absolute h-full w-full left-0 top-0 origin-top rounded-md transition-all duration-300 ease-out group-hover:scale-[102%]">
-        <div className="absolute h-full w-full [mask-image:linear-gradient(to_top,transparent_20%,#000_70%)]">
-          <div className="absolute h-full w-full [mask-image:linear-gradient(to_bottom,transparent_2%,#000_10%)]">
-            <div className="text-7xl font-semibold w-full flex justify-center items-center h-2/3 transition-all duration-300">
-              <div className="flex items-center gap-2"></div>
+        <div className="absolute h-full w-full left-0 flex justify-center rounded-md transition-all duration-300 ease-out group-hover:scale-110 group-hover:-translate-y-4">
+          <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,transparent_40%,#8c8c8c_200%)]">
+            <div className="text-7xl font-semibold w-full flex justify-center items-center h-2/3 group-hover:-translate-y-2 transition-all duration-300">
+              <a
+                href={`${process.env.GITHUB_URL}/${process.env.REPO_NAME}`}
+                className="flex items-center gap-2 border shadow-xl p-5 rounded-lg border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05] dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
+              >
+                <MitraIcon className="h-14 w-14 drop-shadow" />
+              </a>
             </div>
           </div>
         </div>
-      </div>
-    ),
-  },
-
-  {
-    Icon: "",
-    name: "Daily Visitors",
-    description:
-      "Live visitor stats for this website, powered by Umami Analytics.",
-    href: "https://umami.is",
-    cta: "Umami",
-    className: "col-span-3 md:col-span-2",
-    background: (
-      <>
-        <div className="absolute h-full w-full left-0 top-0 origin-top rounded-md transition-all duration-300 ease-out group-hover:scale-[102%]">
-          <div className="absolute h-full w-full [mask-image:linear-gradient(to_top,transparent_20%,#000_70%)]">
-            <div className="absolute h-full w-full [mask-image:linear-gradient(to_bottom,transparent_2%,#000_10%)]"></div>
-            <div className="sm:-translate-y-5"></div>
-          </div>
-        </div>
       </>
     ),
   },
-
   {
     Icon: "",
     name: "",
     description: "",
     className: "col-span-3 md:col-span-1",
-    href: `${process.env.NEXT_PUBLIC_PORTFOLIO_URL}/now`,
-    cta: "Ideas",
-    background: (
-      <div className="absolute h-full w-full left-0 top-0 origin-top rounded-md transition-all duration-300 ease-out group-hover:scale-[105%]">
-        <div className="absolute h-full w-full [mask-image:linear-gradient(to_top,transparent_20%,#000_70%)]">
-          <div className="absolute h-full w-full [mask-image:linear-gradient(to_bottom,transparent_2%,#000_10%)]"></div>
-        </div>
-      </div>
-    ),
-  },
-
-  {
-    Icon: "",
-    name: "",
-    description: "",
-    className: "col-span-3 md:col-span-3",
-    href: "",
+    href: `${process.env.NEXT_PUBLIC_PORTFOLIO_URL}/tags/vercel`,
     cta: "",
     background: (
-      <div
-        id="contact-form"
-        className="absolute h-full w-full left-0 top-0 origin-top rounded-md transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_0%,#000_0%)]"
-      >
-        <div className="absolute inset-0 z-50 flex justify-center items-center gap-5 p-5">
-          <div className="max-w-sm w-full flex flex-col gap-2">
-            <div className="text-5xl md:text-6xl font-semibold text-neutral-700 dark:text-neutral-300 w-full flex justify-start"></div>
-            <div className="w-full flex justify-center text-neutral-500 dark:text-neutral-400">
-              Leave your email to get the conversation started. We&apos;ll be in
-              touch soon.
-            </div>
-            <div className="text-sm text-neutral-500 dark:text-neutral-400 mt-2">
-              *Your email will never be shared with anyone.
-            </div>
-            <div className=""></div>
+      <div className="absolute h-full w-full left-0 top-0 origin-top rounded-md transition-all duration-300 ease-out group-hover:scale-[105%]">
+        <div className="absolute h-full w-full [mask-image:linear-gradient(to_top,transparent_20%,#000_70%)]">
+          <div className="absolute h-full w-full [mask-image:linear-gradient(to_bottom,transparent_2%,#000_10%)]">
+            <RippleCard text="there are more to come." />
           </div>
         </div>
       </div>

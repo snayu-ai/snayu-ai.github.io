@@ -3,7 +3,6 @@ import SiteHeader from "@/components/site-header";
 import { siteConfig } from "@/config/site";
 import Link from "next/link";
 import { ThemeProvider } from "./theme-provider";
-import ChatwootWidget from "./integrations/chatwoot";
 
 export default function App({ children }: PropsWithChildren) {
   return (
@@ -30,7 +29,6 @@ export default function App({ children }: PropsWithChildren) {
           </p>
         </footer>
       </div>
-      <ChatwootWidget />
     </ThemeProvider>
   );
 }

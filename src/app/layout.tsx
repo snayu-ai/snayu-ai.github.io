@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { DM_Mono, Geist, Lexend } from "next/font/google";
+import { DM_Mono, Inter, Lexend } from "next/font/google";
 import "@/styles/globals.css";
 import "@/styles/styles.css";
 import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import App from "@/components/app";
 
-const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: {
@@ -46,8 +46,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen antialiased font-geist bg-background",
-          geist.variable,
+          "min-h-screen antialiased font-inter bg-background",
+          inter.variable,
           fontCode.variable,
           titleFont.variable,
           titleFontItalic.variable,

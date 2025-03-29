@@ -17,7 +17,7 @@ import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 import { MitraIcon } from "@/components/icon";
-import { RippleCard } from "./ui/ripple-card";
+import { RippleCard } from "../components/ui/ripple-card";
 // import { defaultDomains } from "@/lib/data";
 // import { RippleCard } from "./ui/ripper-card";
 // import { motion } from "framer-motion";
@@ -31,7 +31,7 @@ const features = [
     name: "Chetan",
     description: "The comprehensive agent system framework.",
     href: "/chetan",
-    cta: "Go to documentation",
+    cta: "Learn more",
     className: "col-span-3 md:col-span-2",
     background: (
       <>

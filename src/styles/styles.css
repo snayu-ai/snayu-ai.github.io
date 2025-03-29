@@ -19,11 +19,35 @@
     animation:ripple 3.4s ease infinite
 }
 
-pre {
+pre:not(.tab-container pre) {
     border: 1px solid hsl(var(--border)) !important;
+}
+
+.tab-container pre {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    border-radius: 0px !important;
+}
+
+pre {
+    border: none;
+    display: block;
+    cursor: text;
 }
 
 pre code span {
     line-height: 1.8;
     font-weight: 500;
+}
+
+code[data-theme*=" "],
+code[data-theme*=" "] span {
+  color: var(--shiki-light);
+}
+
+html.dark {
+  code[data-theme*=" "],
+  code[data-theme*=" "] span {
+    color: var(--shiki-dark);
+  }
 }

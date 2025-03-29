@@ -4,7 +4,7 @@ import { Bot, Rss } from "lucide-react";
 
 export const NAV_LIST = [
   { label: "Blog", path: "/blog" },
-  { label: "About", path: "/about"},
+  // { label: "About", path: "/about"},
 ];
 
 export const SOCIALS = [

@@ -6,7 +6,6 @@ date: "2025-03-28"
 author: "Tridib Roy Arjo"
 ---
 
-
 We'll build the same system you've seen on the quickstart, web searching system; but this time, we will carefully look at each step.
 
 ## Create a manager object
@@ -28,29 +27,28 @@ mgr = ChetanManager(provider=snayu.provider)
 ## Primitives
 
 ### Language models
+
 Language models need to be aligned with our specific use case. Using generic pre-trained models often leads to vague responses, hallucinations, and potential harm.
 
 While API providers like OpenAI offer access to base models and some fine-tuning capabilities, they still lack advanced alignment techniques like RLHF with algorithms such as [GRPO](https://arxiv.org/pdf/2402.03300). As responsible developers, we should at minimum perform Supervised Fine-tuning (SFT) to adapt models to our specific needs.
 
-So we added built-in SFT and RL capabilities using GRPO to [chetan-serve](https://github.com/snayu-ai/chetan-serve), the official agent system server for chetan. With chetan-serve, we can host both, the language models and agent systems in one server.
+So we added built-in SFT and RL capabilities using GRPO to [zerve](https://github.com/snayu-ai/zerve), the official agent system server for chetan. With chetan-serve, we can host both, the language models and agent systems in one server.
 
 Tighter integration between LMs and agent systems produces reduce latency, increase efficiency and yield better results.
 
-
-<Tabs items={['chetan-serve', 'OpenAI']}>
-  <Tab value="chetan-serve">
+<Tabs>
+  <Tab label="Zerve">
 ```python
-from chetan.lm.serve import ChetanServeLM
+from chetan.lm.zerve import ZerveLM
 
-llm = ChetanServeLM()
+llm = ZerveLM()
 
 # Set as the default language model
 mgr.llm.default = llm
-
-```
+````
 </Tab>
 
-  <Tab value="OpenAI">
+  <Tab label="OpenAI">
 ```python
 from chetan.lm.openai import OpenAILM
 
@@ -58,9 +56,67 @@ llm = OpenAILM()
 
 # Set as the default language model
 mgr.llm.default = llm
+from chetan.lm.openai import OpenAILM
 
-```
+llm = OpenAILM()
 
+# Set as the default language model
+mgr.llm.default = llm
+from chetan.lm.openai import OpenAILM
+
+llm = OpenAILM()
+
+# Set as the default language model
+mgr.llm.default = llm
+from chetan.lm.openai import OpenAILM
+
+llm = OpenAILM()
+
+# Set as the default language model
+mgr.llm.default = llm
+from chetan.lm.openai import OpenAILM
+
+llm = OpenAILM()
+
+# Set as the default language model
+mgr.llm.default = llm
+from chetan.lm.openai import OpenAILM
+
+llm = OpenAILM()
+
+# Set as the default language model
+mgr.llm.default = llm
+from chetan.lm.openai import OpenAILM
+
+llm = OpenAILM()
+
+# Set as the default language model
+mgr.llm.default = llm
+from chetan.lm.openai import OpenAILM
+
+llm = OpenAILM()
+
+# Set as the default language model
+mgr.llm.default = llm
+from chetan.lm.openai import OpenAILM
+
+llm = OpenAILM()
+
+# Set as the default language model
+mgr.llm.default = llm
+from chetan.lm.openai import OpenAILM
+
+llm = OpenAILM()
+
+# Set as the default language model
+mgr.llm.default = llm
+from chetan.lm.openai import OpenAILM
+
+llm = OpenAILM()
+
+# Set as the default language model
+mgr.llm.default = llm
+````
 </Tab>
 </Tabs>
 

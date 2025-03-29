@@ -37,17 +37,16 @@ export default defineConfig({
   },
   collections: { blogs },
   mdx: {
+    gfm: false,
     rehypePlugins: [
       rehypeSlug as any,
       [
         rehypePrettyCode,
         {
-          theme: "github-light",
-          transformers: [
-            transformerCopyButton({
-              visibility: "hover",
-            }),
-          ],
+          theme: {
+            light: "light-plus",
+            dark: "min-dark",
+          },
         },
       ],
       [

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Geist, Lexend } from "next/font/google";
+import { DM_Mono, Geist, Lexend } from "next/font/google";
 import "@/styles/globals.css";
 import "@/styles/styles.css";
 import { ReactNode } from "react";
@@ -16,9 +16,11 @@ export const metadata: Metadata = {
   },
 };
 
-const fontCode = localFont({
-  src: "../assets/fonts/GeistMonoVF.woff2",
+const fontCode = DM_Mono({
   variable: "--font-code",
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 

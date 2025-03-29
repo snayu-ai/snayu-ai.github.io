@@ -61,7 +61,7 @@ export default async function BlogPageItem(props: {
   }
 
   return (
-    <article className="container relative max-w-4xl py-6 lg:py-10">
+    <article className="container relative max-w-3xl py-6 lg:py-10">
       <ScrollProgress className="top-[64px]" />
       <div>
         <h1 className="mt-2 inline-block text-4xl font-title font-medium tracking-tighter capitalize text-center text-primary lg:text-5xl w-full">

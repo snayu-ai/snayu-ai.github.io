@@ -17,7 +17,7 @@ function GridBackground() {
           "absolute inset-0 -z-10 top-0",
           "[background-size:40px_40px]",
           "[background-image:radial-gradient(#4f4f4f_1px,transparent_1px)]",
-          "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]"
+          "dark:[background-image:radial-gradient(#555_1px,transparent_1px)]"
         )}
       />
       {/* Radial gradient for the container to give a faded look */}

@@ -40,7 +40,7 @@ export default function Pre({
       <pre
         ref={preRef}
         className={cn(
-          "mb-4 mt-6 overflow-x-auto text-sm  rounded-lg border !bg-secondary py-4",
+          "mb-4 mt-6 overflow-x-auto text-sm  rounded-lg border bg-secondary! py-4",
           props.className
         )}
         {...props}

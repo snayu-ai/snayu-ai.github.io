@@ -20,7 +20,7 @@ export default function ThemeSwitcher() {
       variant="ghost"
       size="icon"
       onClick={cycleTheme}
-      className="!p-2 w-fit h-fit text-muted-foreground"
+      className="p-2! w-fit h-fit text-muted-foreground"
     >
       {theme === "light" && <Sun className="h-[1.2rem] w-[1.2rem]" />}
       {theme === "dark" && <Moon className="h-[1.2rem] w-[1.2rem]" />}

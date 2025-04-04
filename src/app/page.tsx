@@ -33,12 +33,12 @@ export default function Home() {
     <section className="space-y-6 pb-8 md:pb-12 md:pt-10 lg:py-6">
       <div className="container p-1 mt-6 flex max-w-none mx-0 flex-col items-center gap-4 text-center xl:mt-0">
         <GridBackground />
-        <h1 className="text-foreground text-center text-[3rem] font-bold tracking-[-0.04em] sm:text-5xl md:text-6xl lg:text-7xl lg:max-w-5xl w-full leading-[1.1] text-shadow-lg text-shadow-foreground/5">
+        <h1 className="text-foreground text-center text-[3rem] font-bold tracking-[-0.04em] sm:text-5xl md:text-6xl lg:text-7xl lg:max-w-5xl w-full leading-[1.1]">
           We're shaping the
           <br />
-          <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text tracking-[-0.04em] overflow-visible text-shadow-none">
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text tracking-[-0.04em] overflow-visible">
             LLM Agent
-          </span>
+            </span>
             <br className="md:hidden" />
 
           {/* <ContainerTextFlip

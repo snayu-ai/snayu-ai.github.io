@@ -111,7 +111,7 @@ const features = [
                 href={`${process.env.GITHUB_URL}/${process.env.REPO_NAME}`}
                 className="flex items-center gap-2 border shadow-xl p-5 rounded-lg border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05] dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
               >
-                <MitraIcon className="h-14 w-14 drop-shadow" />
+                <MitraIcon className="h-14 w-14 drop-shadow-sm" />
               </a>
             </div>
           </div>

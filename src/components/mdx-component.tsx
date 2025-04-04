@@ -80,7 +80,7 @@ const components = {
   ),
   p: ({ className, ...props }: ComponentsProps) => (
     <p
-      className={cn("leading-7 [&:not(:first-child)]:mt-6", className)}
+      className={cn("leading-7 not-first:mt-6", className)}
       {...props}
     />
   ),
@@ -96,7 +96,7 @@ const components = {
   blockquote: ({ className, ...props }: ComponentsProps) => (
     <blockquote
       className={cn(
-        "[&>*]:text-muted-foreground mt-6 border-l-2 pl-6 italic",
+        "*:text-muted-foreground mt-6 border-l-2 pl-6 italic",
         className
       )}
       {...props}
@@ -144,7 +144,7 @@ const components = {
   code: ({ className, ...props }: ComponentsProps) => (
     <code
       className={cn(
-        "relative rounded border px-[0.3rem] py-[0.2rem] !bg-secondary font-code font-light !text-sm",
+        "relative rounded border px-[0.3rem] py-[0.2rem] bg-secondary! font-code font-light text-sm!",
         className
       )}
       {...props}

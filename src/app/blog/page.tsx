@@ -39,7 +39,7 @@ export default function BlogPage() {
                 />
               )}
 
-              <h2 className="text-3xl font-title font-medium text-primary tracking-tighter">
+              <h2 className="text-3xl font-title font-medium text-primary tracking-tight">
                 {blog.title}
               </h2>
               {blog.description && (

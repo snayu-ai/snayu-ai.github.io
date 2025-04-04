@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { DM_Mono, Inter, Lexend } from "next/font/google";
+import { DM_Mono, Inter, Lexend, Merriweather } from "next/font/google";
 import "@/styles/globals.css";
 import "@/styles/styles.css";
+import "@/styles/mdx.css";
 import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import App from "@/components/app";
@@ -24,16 +25,10 @@ const fontCode = DM_Mono({
 });
 
 
- const titleFont = localFont({
-  src: "../assets/fonts/Sentient-Variable.woff2",
-  display: "swap",
+ const titleFont = Merriweather({
   variable: "--font-title",
-});
-
-const titleFontItalic = localFont({
-  src: "../assets/fonts/Sentient-VariableItalic.woff2",
-  display: "swap",
-  variable: "--font-title-italic",
+  subsets: ["latin"],
+  weight: "400"
 });
 
 
@@ -49,8 +44,7 @@ export default function RootLayout({
           "min-h-screen antialiased font-inter bg-background",
           inter.variable,
           fontCode.variable,
-          titleFont.variable,
-          titleFontItalic.variable,
+          titleFont.variable
         )}
       >
         <App>{children}</App>

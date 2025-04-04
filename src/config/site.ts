@@ -5,7 +5,7 @@ export const siteConfig = {
   authorImage: authorAvatar,
   social: {
     github: "https://github.com/vinayak-barman",
-    x: "https://x.com/vinayak_barman",
+    x: "https://x.com/vinayakbarman",
   },
 };
 

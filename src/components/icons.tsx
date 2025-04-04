@@ -38,12 +38,11 @@ export const Icons = {
   ),
   logo: (props: IconProps) => (
     <svg
-      id="Layer_1"
       data-name="Layer 1"
       viewBox="0 0 300 300"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
-      className="fill-foreground size-6"
+      className="fill-foreground size-6 transition-transform duration-700 ease-[cubic-bezier(0.625,0.05,0,1)] hover:rotate-180 app-logo-icon"
     >
       <path
         d="M446.67,225a75,75,0,0,1-75-75,75,75,0,1,1-150,0,75,75,0,0,1-75,75,75,75,0,0,1,0,150,75,75,0,0,1,75,75,75,75,0,0,1,150,0,75,75,0,0,1,75-75,75,75,0,0,1,0-150Z"

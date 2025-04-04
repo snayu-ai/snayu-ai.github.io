@@ -11,12 +11,15 @@ import { Icons } from "./icons";
 export default function SiteHeader() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-40 px-2 bg-transparent backdrop-blur-md">
-      <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
-        <div className="flex items-center space-x-3">
-          <Link href="/" className="flex items-center space-x-2 text-foreground">
-            <Icons.logo className="size-12" />
-            <span className="font-bold tracking-tight text-xl">{siteConfig.name}</span>
+    <header className="sticky top-0 z-40 p-2 bg-transparent backdrop-blur-md">
+      <div className="container flex h-16 max-w-full items-center justify-between">
+        <div className="flex items-center space-x-3 app-logo">
+          <Link
+            href="/"
+            className="flex items-center space-x-2 text-foreground"
+          >
+            <Icons.logo className="size-24" />
+            <span className="font-semibold text-2xl">{siteConfig.name}</span>
           </Link>
         </div>
         <div className="flex items-center space-x-5 md:space-x-6">
@@ -35,6 +38,9 @@ export default function SiteHeader() {
               <span className="sr-only">Menu</span>
             </>
           </Button>
+        </div>
+        <div>
+          <Button>Sign up</Button>
         </div>
       </div>
       {isMobileOpen && (

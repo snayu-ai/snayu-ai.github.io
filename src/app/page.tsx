@@ -21,7 +21,7 @@ function GridBackground() {
         )}
       />
       {/* Radial gradient for the container to give a faded look */}
-      <div className="pointer-events-none absolute inset-0 top-0 -z-10 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
+      <div className="pointer-events-none absolute inset-0 top-0 -z-10 flex items-center justify-center bg-[hsl(var(--background))] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
     </>
   );
 }
@@ -31,12 +31,12 @@ export default function Home() {
 
   return (
     <section className="space-y-6 pb-8 md:pb-12 md:pt-10 lg:py-6">
-      <div className="container p-1 mt-6 flex max-w-5xl flex-col items-center gap-4 text-center xl:mt-0">
+      <div className="container p-1 mt-6 flex max-w-none mx-0 flex-col items-center gap-4 text-center xl:mt-0">
         <GridBackground />
-        <h1 className="text-foreground text-center text-[3rem] font-medium tracking-[-0.04em] sm:text-5xl md:text-6xl lg:text-7xl lg:max-w-5xl w-full leading-[1.1]">
-          We shape the
+        <h1 className="text-foreground text-center text-[3rem] font-bold tracking-[-0.04em] sm:text-5xl md:text-6xl lg:text-7xl lg:max-w-5xl w-full leading-[1.1] text-shadow-lg text-shadow-foreground/5">
+          We're shaping the
           <br />
-          <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text font-semibold tracking-[-0.04em] overflow-visible">
+          <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text tracking-[-0.04em] overflow-visible text-shadow-none">
             LLM Agent
           </span>
             <br className="md:hidden" />

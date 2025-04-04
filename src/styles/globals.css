@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
 
 @import 'fumadocs-ui/css/black.css';
 @import 'fumadocs-ui/css/preset.css';
@@ -40,7 +39,7 @@
   .dark {
     --background: 48 3% 5%;
     --foreground: 0 0% 100%;
-    --card: 240 10% 3.9%;
+    --card: 240 2% 6.9%;
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;

@@ -2,7 +2,6 @@ import React from "react";
 import { Metadata } from "next";
 import { blogs as allBlogs } from "#site/content";
 import { cn, formatDate } from "@/lib/utils";
-import "@/styles/mdx.css";
 
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
@@ -62,9 +61,9 @@ export default async function BlogPageItem(props: {
 
   return (
     <article className="container relative max-w-3xl py-6 lg:py-10">
-      <ScrollProgress className="top-[64px]" />
+      <ScrollProgress className="top-[79px]" />
       <div>
-        <h1 className="mt-2 inline-block text-4xl font-title font-medium tracking-tighter capitalize text-center text-primary lg:text-5xl w-full">
+        <h1 className="mt-2 inline-block text-4xl font-title font-medium tracking-tight capitalize text-center text-primary lg:text-5xl w-full">
           {blog.title}
         </h1>
         <div className="flex justify-center items-center gap-2 mt-4">

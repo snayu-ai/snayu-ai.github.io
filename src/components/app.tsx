@@ -14,7 +14,7 @@ export default function App({ children }: PropsWithChildren) {
     >
       <div className="flex min-h-dvh flex-col space-y-6">
         <SiteHeader />
-        <main className="container flex-1">{children}</main>
+        <main className="container flex-1 max-w-none mx-0">{children}</main>
         <footer className=" container border-t border-t-secondary/60 py-3 text-center">
           <p className="text-xs text-muted-foreground">
             &copy; 2025 Created by{" "}

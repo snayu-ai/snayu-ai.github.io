@@ -7,7 +7,7 @@ interface RippleProps {
 }
 
 const Ripple = React.memo(function Ripple({
-  mainCircleSize = 210,
+  mainCircleSize = 110,
   mainCircleOpacity = 0.24,
   numCircles = 8,
 }: RippleProps) {
@@ -23,7 +23,7 @@ const Ripple = React.memo(function Ripple({
         return (
           <div
             key={i}
-            className={`absolute animate-ripple rounded-full bg-foreground/25 shadow-xl border top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 [--i:${i}]`}
+            className={`absolute animate-ripple rounded-full bg-foreground/25 shadow-xl border top-1/2 left-1/2 [--i:${i}]`}
             style={
               {
                 width: `${size}px`,

@@ -21,7 +21,7 @@ export default function SiteHeader() {
     if (ref.current) {
       setLogoWidth(ref.current.clientWidth);
     }
-  }, [ref.current]);
+  }, [ref]);
 
   return (
     <header className="sticky top-0 z-40 p-2 bg-transparent backdrop-blur-md">

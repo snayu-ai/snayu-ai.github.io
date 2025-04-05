@@ -15,23 +15,13 @@ type HeaderTextProps = {
   }
 }
 
-export function HeaderText({lines}: HeaderTextProps) {
-  const [screenSize, setScreenSize] = useState(getSize());
+function HeaderText({lines}: HeaderTextProps) {
+  const [screenSize, setScreenSize] = useState<string>("md");
   const [currentLines, setCurrentLines] = useState(lines?.md || ["Hello, world!"]);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setScreenSize(getSize());
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   function getSize() {
+    if (typeof window === "undefined") return "md";
+    
     const width = window.innerWidth;
     if (width < 768) {
       return "sm";
@@ -43,6 +33,20 @@ export function HeaderText({lines}: HeaderTextProps) {
   }
 
   useEffect(() => {
+    setScreenSize(getSize());
+    
+    const handleResize = () => {
+      setScreenSize(getSize());
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
     if (screenSize === "sm") {
       setCurrentLines(lines.sm || ["Hello, world!"]);
     } else if (screenSize === "md") {
@@ -50,7 +54,7 @@ export function HeaderText({lines}: HeaderTextProps) {
     } else {
       setCurrentLines(lines.lg || ["Hello, world!"]);
     }
-  }, [screenSize]);
+  }, [screenSize, lines]);
   return (
     <motion.h1
       className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium tracking-tight"

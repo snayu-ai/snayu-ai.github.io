@@ -1,13 +1,15 @@
 "use client";
 import { LineShadowText } from "@/components/magicui/line-shadow-text";
 
-import { Bento } from "@/app/bento";
+import { Bento } from "@/app/product_bento";
 import { useTheme } from "next-themes";
 import { ChevronRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Spotlight } from "@/components/ui/spotlight-new";
 import { cn } from "@/lib/utils";
 import { ContainerTextFlip } from "@/components/ui/cyclic-text";
+import { AuroraText } from "@/components/magicui/aurora-text";
+import { TextAnimate } from "@/components/magicui/text-animate";
 
 function GridBackground() {
   return (
@@ -17,7 +19,7 @@ function GridBackground() {
           "absolute inset-0 -z-10 top-0",
           "[background-size:40px_40px]",
           "[background-image:radial-gradient(#4f4f4f_1px,transparent_1px)]",
-          "dark:[background-image:radial-gradient(#555_1px,transparent_1px)]"
+          "dark:[background-image:radial-gradient(#333_1px,transparent_1px)]"
         )}
       />
       {/* Radial gradient for the container to give a faded look */}
@@ -33,32 +35,14 @@ export default function Home() {
     <section className="space-y-6 pb-8 md:pb-12 md:pt-10 lg:py-6">
       <div className="container p-1 mt-6 flex max-w-none mx-0 flex-col items-center gap-4 text-center xl:mt-0">
         <GridBackground />
-        <h1 className="text-foreground text-center text-[3rem] font-bold tracking-[-0.04em] sm:text-5xl md:text-6xl lg:text-7xl lg:max-w-5xl w-full leading-[1.1]">
-          We&apos;re shaping the
-          <br />
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text tracking-[-0.04em] overflow-visible">
-            LLM Agent
-            </span>
-            <br className="md:hidden" />
-
-          {/* <ContainerTextFlip
-            words={["LLM Agent"]}
-          /> */}
-          {/* <LineShadowText
-            className="italic"
-            shadowColor={resolvedTheme === "dark" ? "white" : "black"}
-          >
-            LLM
-          </LineShadowText>
-          &nbsp;
-          <LineShadowText
-            className="italic"
-            shadowColor={resolvedTheme === "dark" ? "white" : "black"}
-          >
-            Agent
-          </LineShadowText> */}
-          &nbsp;ecosystem
-        </h1>
+        <div className="inline">
+          <TextAnimate className="inline text-foreground text-center text-[2.5rem] font-bold tracking-[-0.1em] sm:text-5xl md:text-6xl lg:text-7xl lg:max-w-5xl leading-[1.1]">
+            We&apos;re shaping&nbsp;the
+          </TextAnimate>
+          <AuroraText className="tracking-tighter text-center text-[2.5rem] font-bold sm:text-5xl md:text-6xl lg:text-7xl lg:max-w-5xl w-full leading-[1.1]">
+              LLM Agent ecosystem
+          </AuroraText>
+        </div>
 
         <div className="w-full flex items-center justify-center max-w-5xl mx-auto">
           <div className="w-full flex flex-col items-center overflow-hidden">

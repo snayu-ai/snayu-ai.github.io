@@ -20,12 +20,12 @@ export default function ThemeSwitcher() {
       variant="ghost"
       size="icon"
       onClick={cycleTheme}
-      className="p-2! w-fit h-fit text-muted-foreground"
+      className="aspect-square text-foreground h-full"
     >
-      {theme === "light" && <Sun className="h-[1.2rem] w-[1.2rem]" />}
-      {theme === "dark" && <Moon className="h-[1.2rem] w-[1.2rem]" />}
+      {theme === "light" && <Sun className="size-[1.4rem]" />}
+      {theme === "dark" && <Moon className="size-[1.4rem]" />}
       {(theme === "system" || !theme) && (
-        <Laptop className="h-[1.2rem] w-[1.2rem]" />
+        <Laptop className="size-[1.4rem]" />
       )}
       <span className="sr-only">Toggle theme</span>
     </Button>

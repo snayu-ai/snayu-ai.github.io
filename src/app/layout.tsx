@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { DM_Mono, Inter, Lexend, Merriweather } from "next/font/google";
 import "@/styles/globals.css";
+import "@/styles/animation.css";
 import "@/styles/styles.css";
 import "@/styles/mdx.css";
 import { ReactNode } from "react";
@@ -38,7 +39,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="no-scrollbar">
       <body
         className={cn(
           "min-h-screen antialiased font-inter bg-background",

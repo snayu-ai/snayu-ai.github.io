@@ -3,6 +3,8 @@ import { siteConfig } from "@/config/site";
 import { Bot, Rss } from "lucide-react";
 
 export const NAV_LIST = [
+  { label: "Home", path: "/" },
+  { label: "Chetan", path: "/chetan" },
   { label: "Blog", path: "/blog" },
   // { label: "About", path: "/about"},
 ];
